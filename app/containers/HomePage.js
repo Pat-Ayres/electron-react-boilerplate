@@ -9,7 +9,7 @@ export default class HomePage extends Component<Props> {
 
   render() {
     return (
-      <Home />
+      <Home i18n={this.props.i18n} />
     );
   }
 }

@@ -5,11 +5,15 @@ import App from './containers/App';
 import HomePage from './containers/HomePage';
 import CounterPage from './containers/CounterPage';
 
-export default () => (
-  <App>
-    <Switch>
-      <Route path="/counter" component={CounterPage} />
-      <Route path="/" component={HomePage} />
-    </Switch>
-  </App>
-);
+export default class Routes extends React.Component<Props> {
+  render() {
+    return (
+      <App>
+        <Switch>
+          <Route path="/counter" component={CounterPage} i18n={this.props.i18n} />
+          <Route path="/" component={HomePage} i18n={this.props.i18n} />
+        </Switch>
+      </App>
+    );
+  }
+}

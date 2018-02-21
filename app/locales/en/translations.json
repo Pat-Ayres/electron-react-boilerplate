@@ -1,0 +1,7 @@
+{
+    "title": "Hello Electron React!",
+    "links": {
+        "link1": "home",
+        "link2": "counter"
+    }
+}

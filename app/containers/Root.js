@@ -1,5 +1,6 @@
 // @flow
 import React, { Component } from 'react';
+import { translate, Trans } from 'react-i18next';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import Routes from '../routes';
@@ -14,7 +15,7 @@ export default class Root extends Component<Props> {
     return (
       <Provider store={this.props.store}>
         <ConnectedRouter history={this.props.history}>
-          <Routes />
+          <Routes i18n={this.props.i18n} />
         </ConnectedRouter>
       </Provider>
     );
